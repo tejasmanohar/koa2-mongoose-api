@@ -6,8 +6,7 @@
 import _ from 'koa-route'
 
 // routes
-import * as tags from '../routes/tags'
-import * as emails from '../routes/emails'
+import * as accounts from '../resources/accounts/routes'
 
 /**
  * router
@@ -15,9 +14,9 @@ import * as emails from '../routes/emails'
 
 export default [
   // upsert
-  _.post('/emails', emails.upsert),
+  _.post('/accounts', accounts.upsert),
 
   // read
-  _.get('/emails/:tag', emails.show),
-  _.get('/tags/:email', tags.show)
+  _.get('/accounts/emails/:tag', accounts.tags),
+  _.get('/accounts/tags/:email', accounts.emails)
 ]

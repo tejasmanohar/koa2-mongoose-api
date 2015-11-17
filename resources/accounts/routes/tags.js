@@ -3,12 +3,12 @@
  * module dependencies
  */
 
-import Account from '../resources/account'
+import Account from '../model'
 
 /**
  * route definitions
  */
 
-export async function show (ctx, email) {
+export default async function show (ctx, email) {
   ctx.body = { data: await Account.find({ email }) }
 }
