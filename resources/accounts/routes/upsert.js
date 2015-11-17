@@ -3,6 +3,8 @@
  * dependencies
  */
 
+import { isEmail } from 'validator'
+
 import Account from '../model'
 
 /**
@@ -10,6 +12,7 @@ import Account from '../model'
  */
 
 export default async function upsert (ctx) {
+  if (!isEmail(ctx.request.body.email)) return ctx.status = 400
   const { created, data } = await Account.upsert(ctx.request.body)
   ctx.status = created ? 201 : 200
   ctx.body = { data }
