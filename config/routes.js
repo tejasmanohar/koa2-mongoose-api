@@ -13,6 +13,10 @@ import * as accounts from '../resources/accounts/routes'
  */
 
 export default [
+  /**
+   * accounts
+   */
+
   // upsert
   _.post('/accounts', accounts.upsert),
 
