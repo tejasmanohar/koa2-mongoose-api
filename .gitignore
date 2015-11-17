@@ -1,18 +1,18 @@
-# Logs
+# logs
 logs
 *.log
 npm-debug.log*
 
-# Runtime data
+# runtime data
 pids
 *.pid
 *.seed
 
-# Coverage directory used by tools like istanbul
+# coverage directory used by tools like istanbul
 coverage
 
-# Dependency directory
+# dependency directory
 node_modules
 
-# Babel
+# babel
 dist/
