@@ -10,5 +10,7 @@ import Account from '../model'
  */
 
 export default async function upsert (ctx) {
-  ctx.body = { data: await Account.upsert(ctx.request.body) }
+  const { created, data } = await Account.upsert(ctx.request.body)
+  created ? ctx.status = 201 : ctx.status = 200
+  ctx.body = { data }
 }

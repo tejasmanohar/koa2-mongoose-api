@@ -33,8 +33,8 @@ Account.statics.create = async function (obj) {
 
 Account.statics.upsert = async function ({ email }) {
   const exists = await this.findOne({ email })
-  if (exists) return exists.update(arguments[0])
-  return this.create(arguments[0])
+  if (exists) return { created: false, data: await exists.update(arguments[0]) }
+  return { created: true, data: await this.create(arguments[0]) }
 }
 
 /**
