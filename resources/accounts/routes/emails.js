@@ -11,5 +11,5 @@ import Account from '../model'
 
 export default async function findEmailsByTag (ctx, tag) {
   const accounts = await Account.find({ tags: tag })
-  ctx.body = { data: accounts.length ? accounts.map(o => o.email) : accounts }
+  ctx.body = { data: accounts.map(o => o.email) }
 }
