@@ -9,6 +9,7 @@ should just be
 
 ```
 npm install
+# set MONGO_URI env var in your shell
 npm start
 ```
 
