@@ -1,6 +1,6 @@
 
 /**
- * module dependencies
+ * dependencies
  */
 
 import _ from 'koa-route'

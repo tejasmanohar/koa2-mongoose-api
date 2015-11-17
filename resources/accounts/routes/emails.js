@@ -1,12 +1,12 @@
 
 /**
- * module dependencies
+ * dependencies
  */
 
 import Account from '../model'
 
 /**
- * route definitions
+ * definitions
  */
 
 export default async function show (ctx, tag) {

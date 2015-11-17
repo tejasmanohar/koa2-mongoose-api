@@ -1,6 +1,6 @@
 
 /**
- * module dependencies
+ * dependencies
  */
 
 import mongoose from 'mongoose'

@@ -1,6 +1,6 @@
 
 /**
- * module dependencies
+ * dependencies
  */
 
 import update from 'mongoose-model-update'
