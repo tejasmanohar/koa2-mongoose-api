@@ -1,6 +1,6 @@
 
 /**
- * Module dependencies
+ * module dependencies
  */
 
 import Koa from 'koa'
@@ -9,11 +9,14 @@ import convert from 'koa-convert'
 import compose from 'koa-compose'
 import bodyParser from 'koa-bodyparser'
 
+require('./config/database')
+import routes from './config/routes'
+
 // new app
 const app = new Koa()
 
 /**
- * Middleware
+ * middleware
  */
 
 // legacy middleware
@@ -22,8 +25,10 @@ app.use(compose([
   logger()
 ].map(convert)))
 
+app.use(compose(routes))
+
 /**
- * Server
+ * server
  */
 
 const port = process.env.PORT || 3000
