@@ -12,12 +12,13 @@ npm install
 npm start
 ```
 
-since babel and a `postinstall` script is in place for precompiling
+pretty sure anything about node 0.10.x? will work since this uses babel
+... but you should be on 4+ anyways since it's LTS now :)
 
 ## brief
 
-accounts consist of email (required) + tags[] (optional)
+accounts consist of _email_ (required) + _tags[]_ (optional)
 
-1. POST /accounts w/ these ^above fields (just as they appear in the model)
+1. POST /accounts to upsert (if exists, update. if not, create.) accounts
 2. GET /accounts/emails/:tag to fetch all account emails w/ given tag
 3. GET /accounts/tags/:email to fetch all tags for an account w/ given email
