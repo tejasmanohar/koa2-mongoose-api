@@ -9,7 +9,7 @@ import convert from 'koa-convert'
 import compose from 'koa-compose'
 import bodyParser from 'koa-bodyparser'
 
-require('./config/database')
+import './config/database'
 import routes from './config/routes'
 
 // new app
