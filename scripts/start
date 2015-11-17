@@ -1,0 +1,8 @@
+
+#!/bin/sh
+
+if [ "$NODE_ENV" = development ] || [ -z "$NODE_ENV" ]; then
+  nodemon --exec ./node_modules/.bin/babel-node .
+else
+  node dist/
+fi

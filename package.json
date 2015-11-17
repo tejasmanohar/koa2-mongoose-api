@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "description": "api w/ email-tag bi-directional relationship",
   "main": "index.js",
+  "scripts": {
+    "start": "scripts/start",
+    "postinstall": "scripts/precompile"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tejasmanohar/koa2-mongoose-api.git"
@@ -11,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/tejasmanohar/koa2-mongoose-api/issues"
   },
-  "homepage": "https://github.com/tejasmanohar/koa2-mongoose-api#readme"
+  "homepage": "https://github.com/tejasmanohar/koa2-mongoose-api#readme",
+  "dependencies": {
+    "babel": "^6.1.18",
+    "babel-runtime": "^6.1.18"
+  },
+  "devDependencies": {
+    "nodemon": "^1.8.1"
+  }
 }
