@@ -10,5 +10,10 @@ import Account from '../model'
  */
 
 export default async function show (ctx, tag) {
-  ctx.body = { data: await Account.find({ tags: tag }) }
+  const accounts = await Account.find({ tags: tag })
+  if (!account) {
+    ctx.status = 404
+    return
+  }
+  ctx.body = { data: accounts }
 }

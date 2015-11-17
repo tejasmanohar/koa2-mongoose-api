@@ -10,5 +10,10 @@ import Account from '../model'
  */
 
 export default async function show (ctx, email) {
-  ctx.body = { data: await Account.find({ email }) }
+  const account = await Account.findOne({ email })
+  if (!account) {
+    ctx.status = 404
+    return
+  }
+  ctx.body = { data: account }
 }
