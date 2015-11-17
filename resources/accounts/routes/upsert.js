@@ -12,7 +12,7 @@ import Account from '../model'
  */
 
 export default async function upsert (ctx) {
-  if (!isEmail(ctx.request.body.email)) return ctx.throw('Invalid email', 400)
+  if (!isEmail(ctx.request.body.email)) ctx.throw('Invalid email', 400)
   const { created, data } = await Account.upsert(ctx.request.body)
   ctx.status = created ? 201 : 200
   ctx.body = { data }

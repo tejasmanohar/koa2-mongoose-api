@@ -3,6 +3,6 @@
  * exports
  */
 
-export tags from './tags'
-export emails from './emails'
 export upsert from './upsert'
+export findTagsByEmail from './tags'
+export findEmailsByTag from './emails'

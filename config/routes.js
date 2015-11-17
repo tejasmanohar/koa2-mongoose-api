@@ -21,6 +21,6 @@ export default [
   _.post('/accounts', accounts.upsert),
 
   // read
-  _.get('/accounts/emails/:tag', accounts.tags),
-  _.get('/accounts/tags/:email', accounts.emails)
+  _.get('/accounts/emails/:tag', accounts.findEmailsByTag),
+  _.get('/accounts/tags/:email', accounts.findTagsByEmail)
 ]
