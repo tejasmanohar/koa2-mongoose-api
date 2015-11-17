@@ -1,0 +1,15 @@
+{
+  "name": "koa2-mongoose-api",
+  "version": "0.0.0",
+  "description": "api w/ email-tag bi-directional relationship",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tejasmanohar/koa2-mongoose-api.git"
+  },
+  "author": "Tejas Manohar <me@tejas.io>",
+  "bugs": {
+    "url": "https://github.com/tejasmanohar/koa2-mongoose-api/issues"
+  },
+  "homepage": "https://github.com/tejasmanohar/koa2-mongoose-api#readme"
+}
